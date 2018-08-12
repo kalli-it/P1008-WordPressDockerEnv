@@ -21,6 +21,7 @@ services:
       - db
     image: wordpress:${WORDPRESS_VERSION}
     volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./html:/var/www/html
     ports:
       - "8080:80"
